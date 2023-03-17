@@ -1,0 +1,27 @@
+<!--Razas Formulario-->
+<h1 class="title"> Registro de Nuevas Razas</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="formularios">
+                <form>
+                    <h5>Registrar Raza</h5>
+                    <p>Ingresa la información de la raza</p>
+
+                    <!--Nombre-->
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <label for="nomRaza">Nombre</label>
+                            <br>
+                            <input type="text" class="form-control inputs" formControlName="razaN">
+                        </div>
+                    </div>
+                </form>
+                <!--Fin del formulario-->
+                <br>
+                <button (click)="registroRaza()" class="btn">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>

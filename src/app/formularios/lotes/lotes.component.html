@@ -1,0 +1,39 @@
+<!--Formulario de lotes-->
+<h1 class="title"> Registro de Lotes</h1>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <div class="formularios">
+
+                <!--Inicio del formulario-->
+                <form>
+                    <h5>Registrar Lote</h5>
+                    <p>Ingresa la información del Lote</p>
+                    <div class="row justify-content-center">
+                      <div class="col-10">
+                          <label for="nomLote">Nombre</label>
+                          <br>
+                          <input type="text" class="form-control inputs" formControlName="lote">
+                      </div>
+                  
+                        <div class="col-10">
+                        <!--Usuario-->
+                        <label for="usuario">Usuario</label>
+                        <br>
+                        <select class="form-select form-select-sm select" aria-label=".form-select-sm" formControlName="usuario">
+                            <option selected>Seleccione un usuario</option>
+                            <option [value]="usuario.id" *ngFor="let usuario of usuarios">{{ usuario.nombre }}</option>
+                        </select>
+                        </div>
+                    </div>
+                   
+                </form>
+                <!--Fin del formulario-->
+                <br>
+                <!--Boton para registro de Lote-->
+                <button (click)="registrarLote()" class="btn" >Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>

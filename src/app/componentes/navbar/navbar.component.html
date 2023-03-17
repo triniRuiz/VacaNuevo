@@ -1,0 +1,29 @@
+<!--Navbar-->
+<header>
+  <nav>
+      <ul>
+          <li>
+              <a [routerLink]="('listausuarios')">Home</a>
+          </li>
+          <li>
+              <a [routerLink]="('lotes')">Lotes</a>
+          </li>
+          <li>
+              <a [routerLink]="('estadisticas')">Estadisticas</a>
+          </li>
+          <li>
+              <a [routerLink]="('alimentacion')">Alimentacion</a>
+          </li>
+          <li>
+              <a>Registrar</a>
+              <ul>
+                  <li><a [routerLink]="('vacas')">Vaca</a></li>
+                  <li><a [routerLink]="('lotes')">Lote</a></li>
+                  <li><a [routerLink]="('razas')">Raza</a></li>
+                  <li><a [routerLink]="('usuarios')">Usuarios</a></li>
+              </ul>
+          </li>
+
+      </ul>
+  </nav>
+</header>

@@ -1,0 +1,52 @@
+  
+    <!--Formulas Formulario-->
+    <h1 class="title text-center"> Registro de Nueva Formula</h1>
+
+
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-6 col-lg-4">
+            <div class="formularios">
+                <form [formGroup]="formularioAlimentacion" ngsub>
+
+                    <!--Nombre-->
+                    <div class="row justify-content-center">
+
+                        <div class="col-10 mt-3">
+                            <h5>Registrar formula</h5>
+                        </div>
+
+                        <div class="col-10">
+                            <p>Ingresa la información de la formula</p>
+                        </div>
+                
+                        <div class="col-10 my-2">
+                            <label class="text-left" for="nombre">Nombre</label>
+                            <input type="text" class="form-control inputs" required formControlName="nombre">
+                        </div>
+
+                        <div class="col-10 my-2">
+                            <label class="text-left" for="descripcion">Descripcion</label>
+                            <textarea type="text" class="form-control inputs" required formControlName="descripcion">
+                            </textarea>
+                        </div>
+
+                        <div class="col-10 my-2">
+                            <label class="text-left" for="proposito">Proposito</label>
+                            <select class="form-select form-select-sm select" aria-label=".form-select-sm" formControlName="forma" required>
+                                <option [value]="forma.id" *ngFor="let forma of formas">{{forma.forma}}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-10 text-center mt-2 mb-3">
+                            <button type="button" (click)="nuevaFormula()" class="btn" [disabled]="!formularioAlimentacion.valid">Registrar</button>
+                        </div>
+
+                    </div>
+
+                    
+                </form>
+                <!--Fin del formulario-->
+                
+            </div>
+        </div>
+    </div>

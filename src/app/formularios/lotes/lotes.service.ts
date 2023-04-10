@@ -12,6 +12,10 @@ export class LotesService {
   ) { }
 
   getLotes():Observable<[]>{
-    return this.httoClient.get<[]>('');
+    return this.httoClient.get<[]>('http://localhost:3000/lotes/obtener');
+  }
+
+  postLote(lote:{}, ){
+    return this.httoClient.post('http://localhost:3000/lotes/crear', lote);
   }
 }

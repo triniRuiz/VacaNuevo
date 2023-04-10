@@ -1,27 +1,46 @@
-<!--Razas Formulario-->
-<h1 class="title"> Registro de Nuevas Razas</h1>
+  
+    <!--Razas Formulario-->
+<h1 class="title text-center"> Registro de Nuevas Razas</h1>
 
-<div class="container">
+
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-11 col-md-6 col-lg-4">
             <div class="formularios">
-                <form>
-                    <h5>Registrar Raza</h5>
-                    <p>Ingresa la información de la raza</p>
+                <form [formGroup]="formularioRazas" ngsub>
 
-                    <!--Nombre-->
+                    
                     <div class="row justify-content-center">
-                        <div class="col-10">
-                            <label for="nomRaza">Nombre</label>
-                            <br>
-                            <input type="text" class="form-control inputs" formControlName="razaN">
+
+                        <div class="col-10 mt-3">
+                            <h5>Registrar Raza</h5>
                         </div>
+
+                        <div class="col-10">
+                            <p>Ingresa la información de la raza</p>
+                        </div>
+                        
+                        <!--Nombre-->
+                        <div class="col-10 my-2">
+                            <label class="text-left" for="raza">Nombre</label>
+                            <input type="text" class="form-control inputs" required formControlName="raza">
+                        </div>
+
+                        <!--Peso promedio-->
+                        <div class="col-10 my-2">
+                            <label class="text-left" for="raza">Peso</label>
+                            <input type="number" class="form-control inputs" required formControlName="pesoPromedio" max="9999">
+                        </div>
+
+                        <div class="col-10 text-center mt-2 mb-3">
+                            <button type="button" (click)="nuevaRaza()" class="btn" [disabled]="!formularioRazas.valid">Registrar</button>
+                        </div>
+
                     </div>
+
+                    
                 </form>
                 <!--Fin del formulario-->
-                <br>
-                <button (click)="registroRaza()" class="btn">Registrar</button>
+                
             </div>
         </div>
     </div>
-</div>

@@ -1,23 +1,21 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class RazasService {
+export class AlimentacionService {
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
-  postRaza(raza: {}) {
-    return this.httpClient.post('http://localhost:3000/razas/crear', raza);
+  postFormula(formula: {}) {
+    console.log(formula);
+    return this.httpClient.post('http://localhost:3000/formulas/crear', formula);
   }
 
-  getRazas():Observable<[]>{
+  getFormulas():Observable<[]>{
     return this.httpClient.get<[]>('http://localhost:3000/razas/obtener');
   }
-
-  
 }

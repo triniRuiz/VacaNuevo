@@ -12,8 +12,8 @@ import { UsuariosService } from '../usuarios/usuarios.service';
 export class LotesComponent {
 
   formularioLotes = new FormGroup({
-    lote: new FormControl("", Validators.required),
-    usuario: new FormControl("", Validators.required)
+    lote: new FormControl('', Validators.required),
+    usuario: new FormControl('', Validators.required),
   })
 
   usuarios: usuario[] = [];
@@ -21,8 +21,12 @@ export class LotesComponent {
   constructor(
     public formularioLote: FormBuilder,
     private lotesService: LotesService,
-    private usuariosService: UsuariosService
+    private usuariosService: UsuariosService,
   ) {}
+
+  ngOnInit() {
+    this.getUsuarios();
+  }
 
   getUsuarios(){
     this.usuariosService.getUsuarios().subscribe(usuarios =>{
@@ -42,6 +46,10 @@ export class LotesComponent {
       lote: this.getlote()?.value,
       usuario: this.getlote()?.value
     }
-    if(this.formularioLotes.valid){}
+
+    if(this.formularioLotes.valid){
+      this.lotesService.postLote(registrarLote).subscribe(lote => {
+      });
+    }
   }
 }

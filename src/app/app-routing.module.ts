@@ -1,17 +1,18 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlimentacionComponent } from './componentes/alimentacion/alimentacion.component';
-import { EstadisticasComponent } from './componentes/estadisticas/estadisticas.component';
 
+import { EstadisticasComponent } from './componentes/estadisticas/estadisticas.component';
+import { PesoComponent } from './componentes/peso/peso.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { LotesComponent } from './formularios/lotes/lotes.component';
-import { PesoComponent } from './componentes/peso/peso.component';
 import { RazasComponent } from './formularios/razas/razas.component';
 import { UsuariosComponent } from './formularios/usuarios/usuarios.component';
 import { VacasComponent } from './formularios/vacas/vacas.component';
 import { ListadoUsuariosComponent } from './listados/listado-usuarios/listado-usuarios.component';
 import { ListadoLotesComponent } from './listados/listado-lotes/listado-lotes.component';
 import { ListaVacasComponent } from './listados/lista-vacas/lista-vacas.component';
+import { AlimentacionComponent } from './formularios/alimentacion/alimentacion.component';
+
 
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ const routes: Routes = [
   //Registro de usuarios
   {
     path: 'usuarios',
-    component: UsuariosComponent
+    component: UsuariosComponent,
   },
   //Registro de lotes
   {

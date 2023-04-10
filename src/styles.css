@@ -1,13 +1,15 @@
 *{
     padding: 0;
-    margin: 0;
+    margin: 0%;
 }
 
+
 body{
-    background-color: #1c1c1c;
+    background-color: #181a1b;
     color: #FFFFFF;
 }
 
+/* Botones */
 .btn{
     margin: 10px;
     border: 3px solid;
@@ -18,19 +20,21 @@ body{
     color: rgb(235, 233, 233);
     
 }
-
+/* efecto al pasar el raton encima de los botones*/
 .btn:hover{
     background-color: #accc7b;
     color: black;
     border-color: #20331b;
 }
 
+/* Inputs que van en los formularios*/
 .inputs{
     background-color: transparent !important; 
     color: #FFFFFF !important; 
     border-color: #203120 !important;
 }
 
+/* Selects que van dentro de los formularios */
 .select{
     background-color: #1f1f1f;
     color: #FFFFFF;
@@ -39,43 +43,20 @@ body{
    
 }
 
+/* Cards */
 .formularios{
     margin-top: 20px;
     border-color: #20331b;
     background-color: #1f1f1f;
     color: #FFFFFF;
-    text-align: center;
     border-radius: 25px;
     border-style: solid;
     box-shadow:  5px 5px 5px 0px rgba(49,51,51,.53);
 }
-header{
-    background-color: #0b2913;
-    width: 100%;
-    position: fixed;
-    z-index: 10;
-}
-nav{
-    float: left;
-}
-nav ul{
-    list-style: none;
-    overflow: hidden;
-}
-nav ul li{
-    float: left;
-    font-size: 16px;
-}
-nav ul li a{
-    display: block;
-    padding: 20px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-nav ul li:hover{
-    background-color: #20331b;
-}
 
+
+
+/* Listados de usuarios, vacas, etc. */
 .acordion{
     margin-top: 50px;
     background-color: #252525;
@@ -90,4 +71,47 @@ nav ul li:hover{
 }
 
 
+/* Menú */
 
+
+ul, ol {
+    list-style:none;
+}
+.nav{
+    background-color: #0a1c18;
+    color: #FFFFFF;
+    justify-content: center;
+    height: 60px;
+    margin: auto;
+    
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    background-color: #0a1c18;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+/* Efecto al pasar el raton por encima */
+.nav li a:hover {
+    background-color:#434343;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}

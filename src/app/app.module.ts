@@ -11,10 +11,13 @@ import { RazasComponent } from './formularios/razas/razas.component';
 import { UsuariosComponent } from './formularios/usuarios/usuarios.component';
 import { VacasComponent } from './formularios/vacas/vacas.component';
 import { EstadisticasComponent } from './componentes/estadisticas/estadisticas.component';
-import { AlimentacionComponent } from './componentes/alimentacion/alimentacion.component';
 import { ListadoUsuariosComponent } from './listados/listado-usuarios/listado-usuarios.component';
 import { ListadoLotesComponent } from './listados/listado-lotes/listado-lotes.component';
 import { ListaVacasComponent } from './listados/lista-vacas/lista-vacas.component';
+import { VacaComponent } from './componentes/Editar/vaca/vaca.component';
+import { RazaComponent } from './componentes/Editar/raza/raza.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AlimentacionComponent } from './formularios/alimentacion/alimentacion.component';
 
 
 
@@ -33,12 +36,15 @@ import { ListaVacasComponent } from './listados/lista-vacas/lista-vacas.componen
     ListadoUsuariosComponent,
     ListadoLotesComponent,
     ListaVacasComponent,
+    VacaComponent,
+    RazaComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

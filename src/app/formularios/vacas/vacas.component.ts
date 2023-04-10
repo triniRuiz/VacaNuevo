@@ -15,7 +15,7 @@ export class VacasComponent {
 
   formularioVacas = new FormGroup({
     arete: new FormControl("", Validators.required),
-    fechaIn: new FormControl("", Validators.required),
+    fechaIng: new FormControl("", Validators.required),
     fechaNac: new FormControl("", Validators.required),
     fechaReg: new FormControl("", Validators.required),
     raza: new FormControl("", Validators.required),
@@ -56,7 +56,7 @@ export class VacasComponent {
     return this.formularioVacas.get('raza');
   }
   getFechaIn(){
-    return this.formularioVacas.get('fechaIn');
+    return this.formularioVacas.get('fechaIng');
   }
   getLote(){
     return this.formularioVacas.get('lote');
@@ -74,9 +74,9 @@ export class VacasComponent {
 
     const regVaca = {
       arete: this.getArete()?.value,
-      fecha_nac: this.getFechaNac()?.value,
-      fecha_ing: this.getFechaIn()?.value,
-      fecha_reg: this.getFechaReg()?.value,
+      fechaNac: this.getFechaNac()?.value,
+      fechaIng: this.getFechaIn()?.value,
+      fechaReg: this.getFechaReg()?.value,
       raza: this.getRaza()?.value,
       lote: this.getLote()?.value,
       peso: this.getPeso()?.value

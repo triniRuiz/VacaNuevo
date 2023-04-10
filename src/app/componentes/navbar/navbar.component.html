@@ -1,29 +1,36 @@
 <!--Navbar-->
-<header>
-  <nav>
-      <ul>
-          <li>
-              <a [routerLink]="('listausuarios')">Home</a>
-          </li>
-          <li>
-              <a [routerLink]="('lotes')">Lotes</a>
-          </li>
-          <li>
-              <a [routerLink]="('estadisticas')">Estadisticas</a>
-          </li>
-          <li>
-              <a [routerLink]="('alimentacion')">Alimentacion</a>
-          </li>
-          <li>
-              <a>Registrar</a>
-              <ul>
-                  <li><a [routerLink]="('vacas')">Vaca</a></li>
-                  <li><a [routerLink]="('lotes')">Lote</a></li>
-                  <li><a [routerLink]="('razas')">Raza</a></li>
-                  <li><a [routerLink]="('usuarios')">Usuarios</a></li>
-              </ul>
-          </li>
 
-      </ul>
-  </nav>
-</header>
+    <div id="header">
+        <div class="row g-0">
+            <div class="col">
+            <ul class="nav">
+                <li><a [routerLink]="('listausuarios')">Inicio</a></li>
+                <li><a href="">Registrar</a>
+                <ul>
+                    <li>
+                        <a [routerLink]="('vacas')">Vaca</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="('lotes')">Lote</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="('razas')">Raza</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="('usuarios')">Usuario</a>
+                    </li>
+                </ul>
+            </li>
+           
+            <li>
+                <a [routerLink]="('alimentacion')">Alimentacion</a>
+            </li>
+            <li>
+                <a [routerLink]="('/')">Cerrar Sesion</a>
+            </li>
+           </ul>  
+            </div>
+          
+        </div>
+       
+    </div>

@@ -10,28 +10,38 @@ import { RazasService } from './razas.service';
 export class RazasComponent {
 
   formularioRazas = new FormGroup({
-    nomRaza: new FormControl("", Validators.required)
-  })
+    raza: new FormControl('', Validators.required),
+    pesoPromedio: new FormControl('', Validators.required),
+  });
 
-  private raza = [];
   constructor(
-    public formularioRaza: FormBuilder,
+    public formRaza: FormBuilder,
     private razasService: RazasService,
   ) {}
 
+
+    
+
   getRaza(){
-    return this.formularioRazas.get('nomRaza');
+    return this.formularioRazas.get('raza');
+  }
+  getPesoPromedio(){
+    return this.formularioRazas.get('pesoPromedio');
   }
 
-  async registroRaza() {
-    const registroR = {
-      nomRaza: this.getRaza()?.value
+  async nuevaRaza(){
+
+    const razaN = {
+      nombre: this.getRaza()?.value,
+      pesoProm: this.getPesoPromedio()?.value
     }
 
     if(this.formularioRazas.valid){
-      this.razasService.postRaza(registroR).subscribe(raza => {
-
+      this.razasService.postRaza(razaN).subscribe(razaa =>{
+        console.log(razaa);
+        
       });
     }
   }
+ 
 }

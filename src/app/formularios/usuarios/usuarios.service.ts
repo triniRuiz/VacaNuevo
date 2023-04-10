@@ -12,11 +12,11 @@ export class UsuariosService {
   ) { }
 
   getUsuarios():Observable<[]>{
-    return this.httpClient.get<[]>('http://localhost:3000/obtener');
+    return this.httpClient.get<[]>('http://localhost:3000/usuarios/obtener');
   }
 
   getRoles():Observable<[]>{
-    return this.httpClient.get<[]>('http://localhost:3000/roles');
+    return this.httpClient.get<[]>('http://localhost:3000/gestion/roles');
   }
 
   postUsuario(usuario:{}){

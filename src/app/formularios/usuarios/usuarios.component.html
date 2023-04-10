@@ -1,45 +1,65 @@
 <!--Formulario para registro de nuevos usuarios-->
-<h1 class="title">Registro de Usuarios</h1>
 
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="col-md-8">
-            <div class="formularios">
-                <!--Inicio del formulario-->
-                <form>
-                    <h5>Registrar Usuario</h5>
-                    <p>Ingrese la información del usuario</p>
-                    <div class="row justify-content-center">
-                        <!--Nombre-->
-                        <div class="col-10">
-                            <label for="nombreU">Nombre</label>
-                            <br>
-                            <input type="text" class="form-control inputs" formControlName="nombreU">
-                        </div>
-                        <!--Correo Electronico-->
-                        <div class="col-10">
-                            <label for="correo"> Correo </label>
-                            <input type="email" class="form-control inputs" formControlName="correo" >                
-                        </div>
-                        <!--Contraseña-->
-                        <div class="col-10">
-                            <label for="contrasena">Contraseña</label>
-                            <input type="password" class="form-control inputs" formControlName="contrasena"> 
-                        </div>
-                        <!--Asignacion de Rol-->
-                        <div class="col-10">
-                            <label for="rol">Rol</label>
-                            <select class="form-select form-select-sm select" aria-label=".form-select-sm example" formControlName="rolU">
+
+   <h1 class="title text-center">Registro de Usuarios</h1>
+        <div class="row justify-content-md-center">
+            <div class="col-11 col-md-6 col-lg-5">
+                <div class="formularios">
+                    
+                    <form [formGroup]="formularioUsuario">
+                        
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-10 mt-3">
+                                <h5>Registrar Usuario</h5>
+                            </div>
+                            
+                            <div class="col-10">
+                                <p>Ingrese la información del Usuario</p>
+                            </div>
+
+                            <!--Nombre-->
+                            <div class="col-10 my-2">
+                                <label for="nombreU">Nombre</label>
+                                <input type="text" class="form-control inputs" formControlName="nombre" required>
+                            </div>
+                            
+                            <!--Correo-->
+                            <div class="col-10 my-2">
+                                <label for="correo"> Correo </label>
+                                <input type="email" class="form-control inputs" formControlName="correo"  required>
+                            </div>
+                            
+                            <!--Contraseña-->
+                            <div class="col-10">
+                                <label for="pass">Contraseña</label>
+                                <input type="password" class="form-control inputs" formControlName="pass" required> 
+                            </div>
+                            
+                            <!--Rol-->
+                            <div class="col-10 my-2">
+                                <label for="rol">Rol</label>
+                            <select class="form-select form-select-sm select" aria-label=".form-select-sm example" formControlName="rol" required>
                               <option selected>Elegir Rol</option>
-                              <!--<option [value]="rol.id" *ngFor="let rol of roles"> {{ rol.rol }} </option> -->
+                              <option [value]="rol.id" *ngFor="let rol of roles"> {{rol.rol}} </option>
                             </select>
-                        </div>
-                    </div>
-                </form>
-                <!--Fin del formulario-->
-                <br>
-                <button (click)="registroU()" class="btn">Registrar</button>
+                            </div>
+                            
+                        
+                            
+                          
+                                
+
+                                <div class="col-10 text-center">
+                                    <button (click)="registroU()" class="btn" [disabled]="!formularioUsuario.valid">Registrar</button>
+                                </div>
+                            </div>
+                        
+                
+                    </form>
+                    
+                    <!--Fin del formulario-->
+                    
+                </div>
             </div>
         </div>
-    </div>
-</div>

@@ -1,4 +1,4 @@
 export interface raza {
     id: number;
-    raza: string;
+    nombre: string;
 }

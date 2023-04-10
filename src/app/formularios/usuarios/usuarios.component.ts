@@ -11,10 +11,10 @@ import { UsuariosService } from './usuarios.service';
 export class UsuariosComponent {
 
   formularioUsuario = new FormGroup({
-    nombreU: new FormControl("", Validators.required),
+    nombre: new FormControl("", Validators.required),
     correo: new FormControl("", Validators.required),
-    contrasena: new FormControl("", Validators.required),
-    rolU: new FormControl("", Validators.required),
+    pass: new FormControl("", Validators.required),
+    rol: new FormControl("", Validators.required),
   })
   roles: Rol[] = [];
 
@@ -35,16 +35,16 @@ export class UsuariosComponent {
   }
   
   getUsuario(){
-    return this.formularioUsuario.get('nombreU')
+    return this.formularioUsuario.get('nombre')
   }
   getCorreo(){
     return this.formularioUsuario.get('correo')
   }
   getContrasena(){
-    return this.formularioUsuario.get('contrasena')
+    return this.formularioUsuario.get('pass')
   }
   getRol(){
-    return this.formularioUsuario.get('rolU')
+    return this.formularioUsuario.get('rol')
   }
 
   async registroU(){
@@ -52,11 +52,12 @@ export class UsuariosComponent {
     const regUusuario = {
       nombre: this.getUsuario()?.value,
       correo: this.getCorreo()?.value,
-      contrasena: this.getContrasena()?.value,
+      pass: this.getContrasena()?.value,
       rol: this.getRol()?.value
     }
     if(this.formularioUsuario.valid){
-      this.usuariosService.postUsuario(regUusuario).subscribe(us =>{
+      this.usuariosService.postUsuario(regUusuario).subscribe(usu =>{
+        
       });
     }
   }

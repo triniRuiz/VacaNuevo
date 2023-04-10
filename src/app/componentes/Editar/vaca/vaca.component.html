@@ -1,0 +1,57 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Editar Vaca</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <!--Arete-->
+    <div class="col-10">
+        <label for="areteVaca">Arete</label>
+        <input type="text" class="form-control inputs" formControlName="arete" required>
+    </div>
+    
+    <!--Fecha de Ingreso-->
+    <div class="col-10">
+        <label for="fechaIng"> Fecha de Ingreso </label>
+        <input type="text" class="form-control inputs" formControlName="fechaIn" placeholder="dd/mm/aaaa" required>
+    </div>
+    
+    <!--Raza-->
+    <div class="col-10">
+        <label for="raza">Raza</label>
+        <select class="form-select form-select-sm select" aria-label=".form-select-sm example" formControlName="raza" required>
+            <option selected>Seleccione la raza</option>
+            <!--<option [value]="raza.id" *ngFor="let raza of razas"> {{raza.raza}} </option> -->
+        </select>
+    </div>
+    
+    <!--Fecha de Nacimiento-->
+    <div class="col-10">
+        <label for="nacimiento">Fecha de Nacimiento</label>
+        <input type="text" class="form-control inputs" formControlName="fechaN" placeholder="dd/mm/aaaa" required> 
+    </div>
+    
+    <!--Fecha de registro-->
+    <div class="col-10">
+        <label for="registro" >Fecha de registro</label>
+        <input type="text" class="form-control inputs" formControlName="fechaR" placeholder="dd/mm/aaaa" required>
+    </div>
+    
+    <!--Lote-->
+    <div class="col-10">
+        <label for="lote">Lote</label>
+        <select class="form-select form-select-sm select" aria-label=".form-select-sm" formControlName="lote" required>
+            <option selected>Seleccione el Lote</option>
+            <!--<option [value]="lote.id" *ngFor="let lote of lotes">{{lote.lote}}</option>-->
+        </select>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" >
+      Cancelar
+    </button>
+    <button type="button" class="btn btn-primary">Guardar</button>
+  </div>

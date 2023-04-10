@@ -1,71 +1,86 @@
 <!--Formulario para Registro de Vacas-->
-<h1 class="title">Registro de Vacas</h1>
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="col-8">
-            <div class="formularios">
-                <form>
-                    <h5>Registrar Vaca</h5>
-                    <p>Ingrese la información de la Vaca</p>
-                    <div class="row justify-content-center">
-                        <!--Arete-->
-                        <div class="col-10">
-                            <label for="areteVaca">Arete</label>
-                            <input type="text" class="form-control inputs" formControlName="arete" required>
-                        </div>
-                        <!--Fecha de Ingreso-->
-                        <div class="col-10">
-                            <label for="fechaIng"> Fecha de Ingreso </label>
-                            <input type="text" class="form-control inputs" formControlName="fechaIn" placeholder="dd/mm/aa" required>
-                        </div>
-                        <!--Raza-->
-                        <div class="col-10">
-                            <label for="raza">Raza</label>
-                            <select class="form-select form-select-sm select" aria-label=".form-select-sm example" formControlName="raza" required>
-                                <option selected>Seleccione la raza</option>
-                                <option [value]="raza.id" *ngFor="let raza of razas"> {{ raza.raza }} </option>
-                            </select>
-                        </div>
-                        <!--FEcha de Nacimiento-->
-                        <div class="col-10">
-                            <label for="nacimiento">Fecha de Nacimiento</label>
-                            <input type="text" class="form-control inputs" formControlName="fechaN" placeholder="dd/mm/aa" required> 
-                        </div>
-                        <!--Fecha de registro-->
-                        <div class="col-10">
-                            <label for="registro" >Fecha de registro</label>
-                            <input type="text" class="form-control inputs" formControlName="fechaR" placeholder="dd/mm/aa" required>
-                        </div>
-                        <!--Lote-->
-                        <div class="col-10">
-                            <label for="lote">Lote</label>
-                            <select class="form-select form-select-sm select" aria-label=".form-select-sm" formControlName="lote" required>
-                                <option selected>Seleccione el Lote</option>
-                                <option [value]="lote.id" *ngFor="let lote of lotes">{{ lote.lote }}</option>
-                            </select>
-                        </div>
-                        <!--Peso-->
+    <h1 class="title text-center">Registro de Vacas</h1>
+        <div class="row justify-content-md-center">
+            <div class="col-11 col-md-6 col-lg-5">
+                <div class="formularios">
+                    
+                    <form [formGroup]="formularioVacas">
+                        
                         <div class="row justify-content-center">
-                            <label for="peso">Peso</label>
-                            <br>
-                            <p>Puede registrar el peso en kg o lb</p> 
-                            <div class="col-7">
-                            <input type="text" class="form-control  inputs" formControlName="peso" required>
+                            
+                            <div class="col-10 mt-3">
+                                <h5>Registrar Vaca</h5>
                             </div>
-                            <div class="col-3">
-                            <select class="form-select form-select-sm select" aria-label=".form-select-sm example" formControlName="peso" >
-                              <option selected>Elegir</option>
-                              <option > kg </option>
-                              <option > lg </option>
-                            </select>
+                            
+                            <div class="col-10">
+                                <p>Ingrese la información de la Vaca</p>
+                            </div>
+
+                            <!--Arete-->
+                            <div class="col-10 my-2">
+                                <label for="areteVaca">Arete</label>
+                                <input type="text" class="form-control inputs" formControlName="arete" required>
+                            </div>
+                            
+                            <!--Fecha de Ingreso-->
+                            <div class="col-10 my-2">
+                                <label for="fechaIng"> Fecha de Ingreso </label>
+                                <input type="text" class="form-control inputs" formControlName="fechaIng" placeholder="dd/mm/aaaa" required>
+                            </div>
+                            
+                            <!--Raza-->
+                            <div class="col-10 my-2">
+                                <label for="raza">Raza</label>
+                                <select class="form-select form-select-sm select" aria-label=".form-select-sm example" formControlName="raza" required>
+                                    <option selected>Seleccione la raza</option>
+                                    <option [value]="raza.id" style="color: white;" *ngFor="let raza of razas"> {{raza.nombre}} </option>
+                                </select>
+                            </div>
+                            
+                            <!--Fecha de Nacimiento-->
+                            <div class="col-10 my-2">
+                                <label for="nacimiento">Fecha de Nacimiento</label>
+                                <input type="text" class="form-control inputs" formControlName="fechaNac" placeholder="dd/mm/aaaa" required> 
+                            </div>
+                            
+                            <!--Fecha de registro-->
+                            <div class="col-10 my-2">
+                                <label for="registro" >Fecha de registro</label>
+                                <input type="text" class="form-control inputs" formControlName="fechaReg" placeholder="dd/mm/aaaa" required>
+                            </div>
+                            
+                            <!--Lote-->
+                            <div class="col-10 my-2">
+                                <label for="lote">Lote</label>
+                                <select class="form-select form-select-sm select" aria-label=".form-select-sm" formControlName="lote" required>
+                                    <option selected>Seleccione el Lote</option>
+                                    <option [value]="lote.id" *ngFor="let lote of lotes">{{lote.lote}}</option>
+                                </select>
+                            </div>
+                            
+                            <!--Peso-->
+                            <div class="row justify-content-center">
+                                <div class="col-10">
+                                    <label for="peso">Peso</label>
+                                </div>
+                                
+
+                                <div class="col-10">
+                                    <input type="text" class="form-control  inputs" formControlName="peso" required>
+                                </div>
+                                
+                                
+
+                                <div class="col-10 text-center">
+                                    <button (click)="registroVaca()" class="btn">Registrar</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-                <!--Fin del formulario-->
-                <br>
-                <button (click)="registroVaca()" class="btn">Registrar</button>
+                
+                    </form>
+                    
+                    <!--Fin del formulario-->
+                    
+                </div>
             </div>
         </div>
-    </div>
-</div>

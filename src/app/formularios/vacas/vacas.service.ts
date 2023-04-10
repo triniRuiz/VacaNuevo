@@ -13,4 +13,5 @@ export class VacasService {
   postVaca(vaca:{}){
     return this.httpClient.post('http://localhost:3000/vacas/crear', vaca)
   }
+  
 }

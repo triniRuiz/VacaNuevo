@@ -1,12 +1,14 @@
 <!--Accordion listado de lotes-->
 
-<div class="row justify-content-center">
-    <div class="col-sm-8">
-        <div class="acordion" >
+<h1 class="title text-center">Listado de Lotes</h1>
+<div class="row justify-content-md-center">
+    <div class="col-11 col-md-6 col-lg-5">
+        <div class="acordion" *ngFor="let lote of lote">
             <div class="acordion-item" >
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+                <h2 class="accordion-header" id="lote.id" >
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" 
                     data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    {{lote.lote}}
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
@@ -14,7 +16,7 @@
                         <p class="card-text">Elija un boton para visualizar informacion o Eliminar lote</p>
                     <button   class="btn">Información</button>
                     <button  class="btn">Vacas</button>
-                    <button  class="btn">Eliminar</button>
+                    <button  class="btn" >Eliminar</button>
                     </div>
                 </div>
             

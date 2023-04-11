@@ -12,6 +12,7 @@ import { ListadoUsuariosComponent } from './listados/listado-usuarios/listado-us
 import { ListadoLotesComponent } from './listados/listado-lotes/listado-lotes.component';
 import { ListaVacasComponent } from './listados/lista-vacas/lista-vacas.component';
 import { AlimentacionComponent } from './formularios/alimentacion/alimentacion.component';
+import { ListaFormulasComponent } from './listados/lista-formulas/lista-formulas.component';
 
 
 
@@ -70,7 +71,12 @@ const routes: Routes = [
   {
     path: 'listavacas',
     component: ListaVacasComponent
+  },
+  {
+    path: 'listaformulas',
+    component: ListaFormulasComponent
   }
+
 
 
 ];

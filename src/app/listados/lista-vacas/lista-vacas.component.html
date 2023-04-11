@@ -1,18 +1,21 @@
 <!--Acordion listado de Vacas-->
+<h1 class="title text-center">Listado de Vacas</h1>
+<div class="row justify-content-md-center">
+    <div class="col-11 col-md-6 col-lg-5">
 
-<div class="row justify-content-center">
-    <div class="col-sm-8">
-        <div class="acordion">
+        <div class="acordion " *ngFor="let vaca of vacas">
             <div class="acordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" 
                     data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    *VACA
+                    {{vaca.arete}}
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                     <div class="accordion-body"> 
+                        
                         <p class="card-text">Elja un boton pagra agregar peso, eliminar vaca o ver información</p>
+                    
                     <button   class="btn">Información</button>
                     <button  class="btn">Agregar Peso</button>
                     <button  class="btn">Eliminar</button>

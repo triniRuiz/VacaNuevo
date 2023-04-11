@@ -6,21 +6,39 @@
             <ul class="nav">
                 <li><a [routerLink]="('listausuarios')">Inicio</a></li>
                 <li><a href="">Registrar</a>
-                <ul>
-                    <li>
-                        <a [routerLink]="('vacas')">Vaca</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="('lotes')">Lote</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="('razas')">Raza</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="('usuarios')">Usuario</a>
-                    </li>
-                </ul>
-            </li>
+                    <ul>
+                        <li>
+                            <a [routerLink]="('vacas')">Vaca</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="('lotes')">Lote</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="('razas')">Raza</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="('usuarios')">Usuario</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="">Listados</a>
+                    <ul>
+                        <li>
+                            <a [routerLink]="('listausuarios')">Usuarios</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="('listalotes')">Lote</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="('listavacas')">Vacas</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a [routerLink]="('listaformulas')">Formulas</a>
+                </li>
            
             <li>
                 <a [routerLink]="('alimentacion')">Alimentacion</a>

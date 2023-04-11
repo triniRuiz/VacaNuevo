@@ -16,7 +16,7 @@ export class LotesComponent {
     usuario: new FormControl('', Validators.required),
   })
 
-  usuarios: usuario[] = [];
+  usuario: usuario[] = [];
 
   constructor(
     public formularioLote: FormBuilder,
@@ -30,7 +30,7 @@ export class LotesComponent {
 
   getUsuarios(){
     this.usuariosService.getUsuarios().subscribe(usuarios =>{
-      this.usuarios = usuarios;
+      this.usuario = usuarios;
     });
   }
 
@@ -44,7 +44,7 @@ export class LotesComponent {
   async registrarLote(){
     const registrarLote = {
       lote: this.getlote()?.value,
-      usuario: this.getlote()?.value
+      usuario: this.getUsuario()?.value
     }
 
     if(this.formularioLotes.valid){

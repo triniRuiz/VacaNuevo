@@ -9,7 +9,7 @@ import { lote } from 'src/app/interfaces/lote.interface';
 })
 export class ListadoLotesComponent {
 
-  lotes: lote[] = [];
+  lote: lote[] = [];
 
   constructor(
     private lotesService: LotesService,
@@ -21,8 +21,9 @@ export class ListadoLotesComponent {
 
   getLotes() {
     this.lotesService.getLotes().subscribe(lotes =>{
-      this.lotes = lotes;
+      this.lote = lotes;
     });
   }
+ 
 
 }

@@ -18,6 +18,7 @@ import { VacaComponent } from './componentes/Editar/vaca/vaca.component';
 import { RazaComponent } from './componentes/Editar/raza/raza.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlimentacionComponent } from './formularios/alimentacion/alimentacion.component';
+import { ListaFormulasComponent } from './listados/lista-formulas/lista-formulas.component';
 
 
 
@@ -38,6 +39,7 @@ import { AlimentacionComponent } from './formularios/alimentacion/alimentacion.c
     ListaVacasComponent,
     VacaComponent,
     RazaComponent,
+    ListaFormulasComponent,
 
   ],
   imports: [

@@ -15,7 +15,9 @@ export class LotesService {
     return this.httoClient.get<[]>('http://localhost:3000/lotes/obtener');
   }
 
-  postLote(lote:{}, ){
+  postLote(lote:{} ){
     return this.httoClient.post('http://localhost:3000/lotes/crear', lote);
   }
+  
+
 }
